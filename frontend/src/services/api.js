@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:5000/api";
+const API_BASE_URL = "https://ai-data-anaylist-backend.onrender.com/api";
 
 async function requestAPI(path, options = {}) {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
