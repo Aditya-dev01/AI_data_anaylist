@@ -32,14 +32,15 @@ app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 app.config["UPLOAD_FOLDER"] = str(UPLOAD_FOLDER)
 
 # For local development, Vite normally runs on localhost:5173.
-CORS(
-    app,
-    resources={r"/api/*": {"origins": [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ]}},
-)
+# CORS(
+#     app,
+#     resources={r"/api/*": {"origins": [
+#         "http://localhost:5173",
+#         "http://127.0.0.1:5173",
+#     ]}},
+# )
 
+CORS(app)
 
 def dataset_path(dataset_id):
     """Resolve only UUID-based dataset IDs inside the uploads directory."""
