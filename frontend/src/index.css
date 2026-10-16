@@ -1,0 +1,164 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #172033;
+  background: #f6f8fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+::selection {
+  background: #c7d2fe;
+  color: #312e81;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f6f8fc;
+  color: #172033;
+}
+
+.dark .app-shell {
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+.surface {
+  background: white;
+  border: 1px solid #e9edf5;
+  border-radius: 16px;
+  box-shadow: 0 5px 24px rgba(15, 23, 42, 0.035);
+}
+
+.dark .surface {
+  background: #111a2b;
+  border-color: #243047;
+  box-shadow: none;
+}
+
+.muted {
+  color: #7b879b;
+}
+
+.dark .muted {
+  color: #9ca9bd;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid #dfe5ef;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #172033;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.dark .field {
+  background: #0b1120;
+  border-color: #334155;
+  color: #e5e7eb;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  padding: 9px 13px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+}
+
+.dark .btn-secondary {
+  background: #172237;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.dark .btn-secondary:hover {
+  background: #243047;
+}
+
+@media (max-width: 640px) {
+  .surface {
+    border-radius: 13px;
+  }
+}
